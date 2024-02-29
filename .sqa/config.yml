@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/fair-epos-prototype
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator:
+      branch: main
+      repo: https://github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-razzmatazz-scorpion.sh
+        container: qc.acc_messy-charcoal-bandicoot
+  QC.Doc:
+    repos:
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-lavender-markhor.sh
+        container: qc.doc_hasty-ecru-weasel
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator git:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-alizarin-walrus.sh
+        container: qc.doc_pokey-beige-bulldog
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-cerise-centipede.sh
+        container: qc.doc_pokey-tomato-tetra
+  QC.Lic:
+    repos:
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-alizarin-drever.sh
+        container: qc.lic_jumpy-indigo-capybara
+  QC.Met:
+    repos:
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-thistle-robin.sh
+        container: qc.met_skanky-vermilion-spoonbill
+  QC.Ver:
+    repos:
+      github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-cerise-dachshund.sh
+        container: qc.ver_sickly-salmon-worm
+timeout: 5400
