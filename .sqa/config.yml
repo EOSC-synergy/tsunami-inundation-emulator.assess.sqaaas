@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator git:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-razzmatazz-scorpion.sh
-        container: qc.acc_messy-charcoal-bandicoot
+        - /usr/bin/env sh .sqa/script.queasy-copper-ray.sh
+        container: qc.acc_nerdy-auburn-iguana
   QC.Doc:
     repos:
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-lavender-markhor.sh
-        container: qc.doc_hasty-ecru-weasel
+        - /usr/bin/env sh .sqa/script.lovely-mustard-collie.sh
+        container: qc.doc_hasty-buff-chihuahua
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator git:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-alizarin-walrus.sh
-        container: qc.doc_pokey-beige-bulldog
+        - /usr/bin/env sh .sqa/script.lousy-tan-mole.sh
+        container: qc.doc_bluesy-indigo-chihuahua
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-cerise-centipede.sh
-        container: qc.doc_pokey-tomato-tetra
+        - /usr/bin/env sh .sqa/script.scummy-grey-boar.sh
+        container: qc.doc_lousy-khaki-tuatara
   QC.Lic:
     repos:
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-alizarin-drever.sh
-        container: qc.lic_jumpy-indigo-capybara
+        - /usr/bin/env sh .sqa/script.bluesy-chestnut-ocelot.sh
+        container: qc.lic_gloppy-russet-indri
   QC.Met:
     repos:
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-thistle-robin.sh
-        container: qc.met_skanky-vermilion-spoonbill
+        - /usr/bin/env sh .sqa/script.zippy-bronze-cuttlefish.sh
+        container: qc.met_snappy-myrtle-scorpion
   QC.Ver:
     repos:
       github.com/norwegian-geotechnical-institute/tsunami-inundation-emulator get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-cerise-dachshund.sh
-        container: qc.ver_sickly-salmon-worm
+        - /usr/bin/env sh .sqa/script.slaphappy-tomato-devil.sh
+        container: qc.ver_messy-thistle-dormouse
 timeout: 5400
